@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* Hide checkbox appearance but keep functionality */
+input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* Toast notification styles */
+.toast-notification {
+	position: fixed;
+	top: 150px;
+	left: 200px;
+	padding: 15px 25px;
+	border-radius: 8px;
+	color: white;
+	z-index: 1000;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toast-success {
+	background-color: #00a67c !important;
+}
+
+.toast-error {
+	background-color: #e74c3c !important;
+}
+
+.toast-notification.show {
+	opacity: 1;
+}
+
+/* SweetAlert2 Custom Styles */
+.swal2-popup {
+	background: #1a1a1a !important;
+	color: #fff !important;
+	border: 2px solid #dc3545 !important;
+}
+
+.swal2-title {
+	color: #dc3545 !important;
+	font-weight: 600 !important;
+}
+
+.swal2-html-container {
+	color: #fff !important;
+}
+
+.swal2-confirm {
+	background: #dc3545 !important;
+	color: #fff !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.swal2-confirm:hover {
+	background: #bb2d3b !important;
+}
+
+.swal2-cancel {
+	background: #343a40 !important;
+	color: #fff !important;
+	border: 1px solid #dc3545 !important;
+}
+
+.swal2-cancel:hover {
+	background: #23272b !important;
+}
+
+.swal2-icon.swal2-warning {
+	border-color: #dc3545 !important;
+	color: #dc3545 !important;
+}

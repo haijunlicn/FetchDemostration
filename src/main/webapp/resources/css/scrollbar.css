@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+	width: 4px; /* Extra thin scrollbar */
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; /* Fully transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(108, 117, 125, 0.3); /* Semi-transparent gray */
+	border-radius: 10px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 117, 125, 0.7); /* Slightly brighter when hovered */
+}
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(108, 117, 125, 0.3) transparent;
+}

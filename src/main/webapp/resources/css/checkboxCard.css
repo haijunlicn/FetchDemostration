@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.showtime-box,
+.cate-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+.showtime-card,
+.cate-card {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    min-width: 70px;
+    text-align: center;
+}
+
+.hidden-checkbox:checked ~ .showtime-card,
+.hidden-checkbox:checked ~ .cate-card {
+    background-color: rgba(13, 110, 253, 0.2);
+    color: #00193d;
+    border-color: #0a58ca;
+}

@@ -1,0 +1,491 @@
+@charset "UTF-8";
+
+.hero-section {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+		url('resources/images/cinema-hero.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 50px 0;
+	color: white;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.quick-select-container {
+	position: sticky;
+	top: 70px;
+	z-index: 997;
+}
+
+.quick-select {
+	background: #141414;
+	border-radius: 10px;
+	padding: 15px;
+	margin-top: -20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	color: #ffffff;
+}
+
+:root {
+	--primary: #e50914;
+	--dark: #0a0a0a;
+	--light: #ffffff;
+	--gray: #8c8c8c;
+}
+
+.form-select, .form-control {
+	background: rgba(0, 0, 0, 0.8) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	color: var(--light) !important;
+}
+
+.input-group-text {
+	background: rgba(0, 0, 0, 0.8) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	color: var(--light) !important;
+}
+
+.search-btn {
+	background: var(--primary);
+	color: var(--light);
+	border: none;
+	padding: 8px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: auto;
+	min-width: 120px;
+}
+
+.search-btn:hover {
+	background: #ff0a16;
+	transform: translateY(-2px);
+}
+
+.search-btn i {
+	font-size: 1rem;
+}
+
+/* New Card Design */
+.content-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.movie-showtime-card {
+	display: flex;
+	background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.3s ease;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 250px;
+}
+
+.movie-showtime-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.movie-showtime-poster {
+	flex: 0.5;
+	max-width: 25%;
+	overflow: hidden;
+	padding: 15px;
+}
+
+.movie-showtime-poster img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+	border-radius: 10px;
+}
+
+.movie-showtime-card:hover .movie-showtime-poster img {
+	transform: scale(1.1);
+}
+
+.movie-info {
+	flex: 1;
+	padding: 20px;
+	background: rgba(20, 20, 20, 0.95);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-right: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.cinema-info {
+	flex: 0.8;
+	padding: 20px;
+	background: rgba(20, 20, 20, 0.95);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.movie-title {
+	font-size: 1.5rem;
+	color: var(--light);
+	margin-bottom: 7px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.movie-title:hover {
+	color: var(--primary);
+}
+
+.movie-meta {
+	display: flex;
+	gap: 13px;
+	flex-wrap: wrap;
+	margin-bottom: 12px;
+}
+
+.meta-item {
+	color: var(--gray);
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.meta-item i {
+	color: var(--primary);
+}
+
+.showtime-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 7px;
+	margin: 12px 0;
+}
+
+.time-slot {
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--light);
+	padding: 6px 10px;
+	border-radius: 10px;
+	font-size: 0.8rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+	background: var(--primary);
+	transform: scale(1.05);
+}
+
+.book-btn {
+	width: 100%;
+	background: var(--primary);
+	color: var(--light);
+	border: none;
+	padding: 12px;
+	border-radius: 10px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.book-btn:hover {
+	background: #ff0a16;
+	transform: translateY(-2px);
+}
+
+.price-tag {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: rgba(229, 9, 20, 0.9);
+	color: var(--light);
+	padding: 6px 12px;
+	border-radius: 15px;
+	font-weight: 600;
+}
+
+.showing-dates {
+	color: var(--gray);
+	font-size: 0.87rem;
+	margin-bottom: 10px;
+}
+
+.price-range {
+	color: var(--primary);
+	font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.cinema-features {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+.feature-badge {
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--light);
+	padding: 4px 10px;
+	border-radius: 12px;
+	font-size: 0.8rem;
+}
+
+.cinema-name {
+	font-size: 1.4rem;
+	color: var(--light);
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.cinema-name:hover {
+	color: var(--primary);
+}
+
+.cinema-address {
+	color: var(--gray);
+	font-size: 0.9rem;
+	margin-bottom: 15px;
+}
+
+/* Modal Styles */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	backdrop-filter: blur(8px);
+}
+
+.modal-content {
+	background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+	margin: 5% auto;
+	padding: 30px;
+	width: 70%;
+	max-width: 800px;
+	border-radius: 20px;
+	position: relative;
+	color: var(--light);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-content h2 {
+	color: var(--primary);
+	font-size: 2rem;
+	margin-bottom: 20px;
+	border-bottom: 2px solid rgba(229, 9, 20, 0.3);
+	padding-bottom: 10px;
+}
+
+.modal-content p {
+	margin: 15px 0;
+	line-height: 1.6;
+}
+
+.modal-content strong {
+	color: var(--primary);
+}
+
+.modal-content ul {
+	list-style: none;
+	padding: 0;
+}
+
+.modal-content ul li {
+	padding: 8px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	color: var(--gray);
+}
+
+.modal-content ul li:last-child {
+	border-bottom: none;
+}
+
+.close-modal {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	font-size: 28px;
+	color: var(--gray);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.close-modal:hover {
+	color: var(--primary);
+	background: rgba(229, 9, 20, 0.2);
+	transform: rotate(90deg);
+}
+
+/* New Trailer Button Style */
+.movie-title-container {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.trailer-btn {
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--light);
+	border: none;
+	padding: 5px 15px;
+	border-radius: 20px;
+	font-size: 0.9rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.trailer-btn:hover {
+	background: var(--primary);
+	transform: scale(1.05);
+}
+
+/* Trailer Modal Style */
+.trailer-modal-content {
+	width: 80%;
+	max-width: 900px;
+	padding: 0;
+	background: transparent;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 10px;
+}
+
+/* Movie Image Slider */
+.movie-image-slider {
+	width: 1000px;
+	position: relative;
+	margin-right: 20px;
+}
+
+.slider-images {
+	width: 100%;
+	border-radius: 10px;
+	display: none;
+}
+
+.slider-images.active {
+	display: block;
+}
+
+.slider-nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
+	background: rgba(229, 9, 20, 0.3);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.slider-nav:hover {
+	background: var(--primary);
+}
+
+.prev-btn {
+	left: -40px;
+}
+
+.next-btn {
+	right: -40px;
+}
+
+.slider-dots {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 5px;
+}
+
+.dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+}
+
+.dot.active {
+	background: var(--primary);
+}
+
+/* Responsive for smaller screens */
+@media ( max-width : 768px) {
+	.movie-showtime-card {
+		flex-direction: column;
+		height: auto;
+	}
+	.movie-showtime-poster {
+		max-width: 100%;
+		height: 200px;
+	}
+	.movie-info, .cinema-info {
+		border-right: none;
+		border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+	}
+	.modal-content {
+		width: 90%;
+		margin: 10% auto;
+	}
+	.trailer-modal-content {
+		width: 95%;
+	}
+}

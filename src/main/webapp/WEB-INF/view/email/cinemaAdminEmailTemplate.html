@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.email-container {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+}
+
+.header {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+}
+
+.content {
+	font-size: 16px;
+	color: #555;
+}
+
+.footer {
+	margin-top: 20px;
+	font-size: 14px;
+	color: #777;
+}
+</style>
+</head>
+<body>
+	<div class="email-container">
+		<p class="header">Welcome to the Cinema Admin Panel</p>
+		<p class="content">
+			Hello <strong>{{name}}</strong>,
+		</p>
+		<p class="content">You have been successfully registered as a
+			Cinema Admin.</p>
+		<p class="content">Your login details:</p>
+		<ul>
+			<li><strong>Email:</strong> {{email}}</li>
+			<li><strong>Password:</strong> <span style="color: red">{{password}}</span>
+				(Please change it after logging in.)</li>
+		</ul>
+		<p class="footer">
+			Best regards,<br>Cinema Admin Team
+		</p>
+	</div>
+</body>
+</html>
